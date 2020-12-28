@@ -1,15 +1,15 @@
 !!Introduction
 
-!!!Rational
+!!!Rationale
 @ch:ngRational
 
 The idea behind FamixNG is to allow the creation of meta-models by composing basic entities rather than using single inheritance.
 
-Take for example a simple model with Classes and Methods. A Class has a ''name'' and ''contains'' methods. A Method has a ''name''. The Figure *@simpleHierarchy* shows a simple hierarchy of these classes.
+Take for example a simple model with Classes and Methods. A Class has a ''name'' and ''contains'' methods. A Method has a ''name''. The Figure *@fig:simpleHierarchy* shows a simple hierarchy of these classes.
 
 +A simple meta-model entities hierarchy.>figures/intro1.eps|width=35|label=fig:simpleHierarchy+
 
-However, if we introduce AnonymousClass we have a problem, it is a Class (thus a ContainerEntity, but it is not Named).
+However, if we introduce AnonymousClass we have a problem; it is a Class (thus a ContainerEntity, but it is not Named).
 With composition, we could say that there are named entities (that have a name) and there are container entities (that contain other entities). A Class is composed of NamedEntity and ContainerEntity, an AnonymousClass is a composition of ContainerEntity, and a Method is a composition of NamedEntity.
 
 FamixNG offers a collection of fundamental concepts (NamedEntities, ScopingEntities...) and a better mechanism to handle bi-directional associations to simplify the creation of new meta-models.
